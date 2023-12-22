@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:backgroundTint="@color/card_color"
+    android:theme="@style/Widget.Material3.CardView.Elevated"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/save_this_job"
+            android:src="@drawable/bookmark"
+            app:layout_constraintBottom_toBottomOf="@+id/img_article"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_article"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_article"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="12dp"
+            android:contentDescription="@string/job_title"
+            android:scaleType="centerCrop"
+            android:src="@color/black"
+            app:riv_corner_radius="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+
+
+        <TextView
+            android:id="@+id/tv_job_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:maxLines="1"
+            android:fontFamily="@font/outfit_bold"
+            android:text="@string/job_title"
+            android:textColor="@color/color_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_news_description"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton"
+            app:layout_constraintStart_toEndOf="@id/img_article"
+            app:layout_constraintTop_toTopOf="@id/img_article" />
+
+        <TextView
+            android:id="@+id/tv_news_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/job_field"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/color_sub_text"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_article"
+            app:layout_constraintStart_toEndOf="@+id/img_article"
+            app:layout_constraintTop_toBottomOf="@id/tv_job_title"
+            tools:ignore="TextContrastCheck" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_verified_24"
+            android:layout_marginStart="4dp"
+            android:contentDescription="@string/verified_company_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_news_description"
+            app:layout_constraintStart_toEndOf="@+id/tv_news_description"
+            app:layout_constraintTop_toTopOf="@+id/tv_news_description" />
+
+        <ImageView
+            android:id="@+id/ic_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/icon"
+            android:src="@drawable/location"
+            app:layout_constraintStart_toStartOf="@id/img_article"
+            app:layout_constraintTop_toBottomOf="@id/img_article" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/job_location"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/ic_location"
+            app:layout_constraintStart_toEndOf="@id/ic_location"
+            app:layout_constraintTop_toTopOf="@id/ic_location" />
+
+        <ImageView
+            android:id="@+id/ic_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/icon"
+            android:src="@drawable/clock"
+            app:layout_constraintStart_toEndOf="@id/tv_location"
+            app:layout_constraintTop_toTopOf="@id/ic_location" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/job_time"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/ic_time"
+            app:layout_constraintStart_toEndOf="@id/ic_time"
+            app:layout_constraintTop_toTopOf="@id/ic_time" />
+
+        <ImageView
+            android:id="@+id/ic_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/icon"
+            android:src="@drawable/bag"
+            app:layout_constraintStart_toEndOf="@id/tv_time"
+            app:layout_constraintTop_toTopOf="@id/ic_location" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/job_type"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/ic_type"
+            app:layout_constraintStart_toEndOf="@id/ic_type"
+            app:layout_constraintTop_toTopOf="@id/ic_type" />
+
+        <ImageView
+            android:id="@+id/ic_salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/icon"
+            android:src="@drawable/cash_stack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ic_location"
+            app:layout_constraintTop_toBottomOf="@id/ic_location" />
+
+        <TextView
+            android:id="@+id/tv_salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/salary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/ic_salary"
+            app:layout_constraintStart_toEndOf="@id/ic_salary"
+            app:layout_constraintTop_toTopOf="@id/ic_salary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
